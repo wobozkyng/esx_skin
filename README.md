@@ -1,32 +1,15 @@
+# Description
+Modified version of original esx_skin resource. 
+- Added input value feature so player able jump to exact value.
+![alt text](https://cdn.discordapp.com/attachments/1056725004458393651/1057711360999444592/image.png)
+- Press Enter (submit) on "Finish" to end the customization (returns submit callback).
+![alt text](https://cdn.discordapp.com/attachments/1056725004458393651/1057711276538740926/image.png)
+- Press Backspace also ends the customization, but need to choose to save the changes or not.
+- "Yes" returns submit callback, "No" returns cancel callback.
+![alt text](https://cdn.discordapp.com/attachments/1056725004458393651/1057711462329634966/image.png)
+
 # esx_skin
-
-## Requirements
-- [skinchanger](https://github.com/ESX-Org/skinchanger)
-
-## Download & Installation
-
-### Using [fvm](https://github.com/qlaffont/fvm-installer)
-```
-fvm install --save --folder=esx esx-org/esx_skin
-```
-
-### Using Git
-```
-cd resources
-git clone https://github.com/ESX-Org/esx_skin [esx]/esx_skin
-```
-
-### Manually
-- Download https://github.com/ESX-Org/esx_skin/archive/master.zip
-- Put it in the `[esx]` directory
-
-## Installation
-- Import `esx_skin.sql` to your database
-- Add this in your `server.cfg`:
-
-```
-start esx_skin
-```
+- Credit: https://github.com/esx-framework/esx-legacy
 
 # Legal
 ### License
