@@ -35,14 +35,16 @@ function OpenMenu(submitCb, cancelCb, restrict)
             end
         end
         -- Insert elements
-        table.insert(elements, {
-			label     = 'Finish',
-			name      = 'submit',
-			value     = 'submit',
-			min       = 0,
-			zoomOffset= 0.6,
-			camOffset = 0.65,
-		})
+        if Config.EnableInput then
+            table.insert(elements, {
+                label     = 'Finish',
+                name      = 'submit',
+                value     = 'submit',
+                min       = 0,
+                zoomOffset= 0.6,
+                camOffset = 0.65,
+            })
+        end
         for i=1, #_components, 1 do
             local value = _components[i].value
             local componentId = _components[i].componentId
@@ -81,6 +83,13 @@ function OpenMenu(submitCb, cancelCb, restrict)
             align = 'bottom-left',
             elements = elements
         }, function(data, menu)
+            if not Config.EnableInput then
+                TriggerEvent('skinchanger:getSkin', function(skin) lastSkin = skin end)
+
+                submitCb(data, menu)
+                DeleteSkinCam()
+                return
+            end
             if data.current.value == 'submit' then
                 TriggerEvent('skinchanger:getSkin', function(skin)
 					lastSkin = skin
@@ -139,6 +148,16 @@ function OpenMenu(submitCb, cancelCb, restrict)
                 menu2.close()
             end)
         end, function(data, menu)
+            if not Config.EnableInput then
+                menu.close()
+                DeleteSkinCam()
+                TriggerEvent('skinchanger:loadSkin', lastSkin)
+    
+                if cancelCb ~= nil then
+                    cancelCb(data, menu)
+                end
+                return
+            end
             local elements2 = {}
             table.insert(elements2, {
                 label     = 'No',

@@ -1,5 +1,7 @@
 Config = {}
 
+Config.EnableInput = true
+
 Config.Locale = GetConvar('esx:locale', 'en')
 
 Config.BackpackWeight = {
