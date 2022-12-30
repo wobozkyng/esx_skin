@@ -1,15 +1,21 @@
 # Description
 Modified version of original esx_skin resource. 
 - Added input value feature so player able jump to exact value.
-![alt text](https://cdn.discordapp.com/attachments/1056725004458393651/1057711360999444592/image.png)
+<details><summary>Preview</summary>
+![](https://cdn.discordapp.com/attachments/1056725004458393651/1057711360999444592/image.png)
+</details>
 - Press Enter (submit) on "Finish" to end the customization (returns submit callback).
-![alt text](https://cdn.discordapp.com/attachments/1056725004458393651/1057711276538740926/image.png)
 - Press Backspace also ends the customization, but need to choose to save the changes or not.
+<details><summary>Preview</summary>
+![](https://cdn.discordapp.com/attachments/1056725004458393651/1057711276538740926/image.png)
+</details>
 - "Yes" returns submit callback, "No" returns cancel callback.
-![alt text](https://cdn.discordapp.com/attachments/1056725004458393651/1057711462329634966/image.png)
+<details><summary>Preview</summary>
+![](https://cdn.discordapp.com/attachments/1056725004458393651/1057711462329634966/image.png)
+</details>
 
 # esx_skin
-- Credit: https://github.com/esx-framework/esx-legacy
+- Credit: [Original Repository](https://github.com/esx-framework/esx-legacy)
 
 # Legal
 ### License
