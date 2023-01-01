@@ -202,16 +202,8 @@ function OpenMenu(submitCb, cancelCb, restrict)
                 
                 menu3.close()
             end, function(data3, menu3)
-                DeleteSkinCam()
-                TriggerEvent('skinchanger:loadSkin', lastSkin)
                 
                 menu3.close()
-
-                if cancelCb ~= nil then
-                    cancelCb(data, menu)
-                end
-                
-                menu.close()
             end)
         end, function(data, menu)
             local skin, components, maxVals
